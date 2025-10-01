@@ -1,0 +1,38 @@
+CHECKLIST – Sprint 1 TelcoNova
+
+Pendientes técnicos y recomendaciones para siguientes entregas:
+
+1. Compilación y despliegue
+- Verificar compilación del backend en el entorno local con Maven y Java 17.
+- Ajustar posibles diferencias entre javax.persistence y jakarta.persistence según la versión de JDK/Spring.
+
+2. Seguridad
+- Reemplazar el secret de JWT en application.properties por una variable de entorno segura.
+- Configurar correctamente CORS en SecurityConfig para permitir acceso desde el frontend (http://localhost:5173).
+
+3. Base de datos
+- Añadir índices adicionales en tablas con consultas frecuentes (ejemplo: estado + fecha en orden_trabajo).
+- Revisar normalización de relaciones y optimizar consultas JOIN.
+- Validar que el procedimiento registro_intento_login esté funcionando y que el event_scheduler esté activado en MySQL.
+
+4. Funcionalidades pendientes
+- Implementar HU_04 (notificación de asignación).
+- Implementar HU_05 (reportes de asignaciones).
+- Completar CRUDs de entidades relacionadas (cliente, servicio, evidencias).
+
+5. JPA y entidades
+- Migrar campos de llaves foráneas simples a relaciones @ManyToOne / @OneToMany en entidades de JPA.
+- Agregar validaciones con Bean Validation (javax/jakarta.validation).
+
+6. Frontend
+- Integrar componentes del frontend alterno (legacy) con el frontend principal.
+- Mejorar interfaz para asignaciones y reportes.
+- Implementar manejo de token JWT en todas las peticiones (almacenamiento en localStorage o sessionStorage).
+
+7. Documentación
+- Exportar diagramas de draw.io a PNG/SVG y añadirlos en /docs.
+- Completar README con enlaces definitivos (diagramas y Azure DevOps).
+
+8. Despliegue
+- Crear un archivo docker-compose.yml con servicios: MySQL, backend y frontend.
+- Evaluar despliegue en Azure App Service o contenedores según requerimientos del curso.
