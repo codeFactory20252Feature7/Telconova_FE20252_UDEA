@@ -12,8 +12,6 @@ TelcoNova es un sistema para la gestión de órdenes de trabajo y la asignación
 ```
 telconova_project/
   backend/                  # Spring Boot 3 (Java 17, Maven)
-  frontend_supportsuite/    # React + Vite
-  frontend_alt/             # Frontend alterno / legacy
   database/                 # Scripts SQL (schema.sql, data.sql, procedimientos.sql)
   docs/                     # Diagramas draw.io exportados
   README.md                 # Este archivo
